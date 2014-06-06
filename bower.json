@@ -1,6 +1,6 @@
 {
   "name": "angular-dock-modal",
-  "version": "1.0",
+  "version": "1.1",
   "homepage": "https://github.com/dorbacao/angular-dock-modal",
   "description": "Directiva  de componente para renderização do componente dock model",
   "moduleType": [
