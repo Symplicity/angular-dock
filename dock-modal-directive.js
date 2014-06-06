@@ -12,8 +12,17 @@
 
 				var button = $("#" + $scope.ngDockButton);
 
+				var config = $scope.ngDockConfig;
+
+				config.close = function( event, dialog ) {
+					iElement.hide();
+				};
+
+				iElement.hide();
+
 				button.click(function(){
-					iElement.dockmodal($scope.ngDockConfig);	
+					iElement.dockmodal(config);	
+					iElement.show();
 				});
 			},
 
