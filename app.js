@@ -1,17 +1,12 @@
 (function(angular){
 
-	var app = angular.module('app', ['dock-modal-directive', 'ngRoute']);
+  var app = angular.module('app', ['dock-modal-directive']);
 
-	app.config(['$routeProvider', function($routeProvider){
 
-		return $routeProvider
-		.when('/exemplo1', {
-			templateUrl:'exemplo1.html',
-			controller:'Exemplo1Ctrl'
-		})
-		.otherwise({
-        	redirectTo: '/exemplo1'
-        });
-	}]);
-
+  app.controller('mainCtrl', function($rootScope, dockService){
+    $rootScope.dockService = dockService;
+  });
+  
+  
+  
 })(angular);

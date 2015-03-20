@@ -1,0 +1,15 @@
+
+<div ng-controller="fooDockCtrl">
+  <div>
+    <h1>{{dock.title || "foo title"}}</h1>
+    <input ng-model="foo.name" type="text" />
+    <p> stuff goes here </p>
+  </div>
+  
+  <div class="dockmodal-footer">
+    <div class='dockmodal-footer-buttonset'>
+      <a href="#" class="btn" ng-click="newFoo(foo)">Save</a>
+    </div>
+  </div>
+  
+</div>

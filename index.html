@@ -1,54 +1,62 @@
-
 <!doctype html>
-<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
-<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
-<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
-<!--[if (gt IE 7)|!(IE)]><!-->
-<html lang="en-us"><!--<![endif]-->
+
+<html lang="en-us">
 <head>
-	<meta charset="utf-8" >
+  <meta charset="utf-8" >
 
-	<title>Gmail like Dockable Modal Dialog Plugin - Modal dialogs that can be minimized</title>
+  <title></title>
+  <script>document.createElement('section');var duration='500',easing='swing';</script>
 
-	<meta name="description" content="Dockmodal - dockable modal dialog plugin that has the option to minimize and restore opened modal dialogs. A huge range of options and events are provided."/>
-	<meta name="author" content="Tarafder Ashek E Elahi"/>
-	<meta name="copyright" content="Tarafder Ashek E Elahi"/>
-	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter"/>
-	<meta name="date" content="2014-01-16T00:00:00+01:00"/>
-
-    <script>document.createElement('section');var duration='500',easing='swing';</script>
-
-	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all"/>
-	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen"/>
-	<link rel="stylesheet" href="assets/css/demo.css" media="screen"/>
-    <link rel="stylesheet" href="assets/css/jquery.dockmodal.css"/>
+  <link rel="stylesheet" href="assets/css/documenter_style.css" media="all"/>
+  <link rel="stylesheet" href="assets/css/demo.css" media="screen"/>
+  <link rel="stylesheet" href="assets/css/jquery.dockmodal.css"/>
 
 </head>
-<body ng-app="app" class="documenter-project-gmail-like-dockable-modal-dialog-plugin">
+<body ng-app="app" ng-controller="mainCtrl" class="documenter-project-gmail-like-dockable-modal-dialog-plugin">
 
-    <div ng-view>
+  
+  
+  <button type="button"
+        class="btn btn-primary pull-right"
+        ng-click="dockService.addDock('foo/foo-form.html', {title: 'Foooooo'})">
+    Foo
+  </button>
+  <button type="button"
+          class="btn btn-primary pull-right"
+          ng-click="dockService.addDock('bar/bar-form.html')">
+    Bar
+  </button>
+  
+  
+  
+  <!--/hidden-blocks
+  <script src="assets/js/script.js"></script>
+  -->
+  <script src="assets/js/google-code-prettify/prettify.js"></script>
+  <script src="assets/js/jquery-1.9.1.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.1.1.min.js"></script>
+  <script src="assets/js/jquery.scrollTo.js"></script>
+  <script src="assets/js/jquery.easing.js"></script>
+  <script src="assets/js/jquery.dockmodal.js"></script>
+  <script src="http://underscorejs.org/underscore-min.js"></script>
+  
+  <script src="assets/js/angular.js"></script>
+  
+  <script src="app.js"></script>
+  <script src="docks/dock-modal-directive.js"></script>
+  <script src="docks/dock-service.js"></script>
+  <script src="foo/fooCtrl.js"></script>
+  <script src="bar/barCtrl.js"></script>
 
-        <div ng-dock>
-        </div>
-    </div>
-
-    <!--/hidden-blocks
-    <script src="assets/js/script.js"></script>
-    -->
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="assets/js/jquery-1.9.1.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.1.1.min.js"></script>    
-    <script src="assets/js/jquery.scrollTo.js"></script>
-    <script src="assets/js/jquery.easing.js"></script>
-    <script src="assets/js/jquery.dockmodal.js"></script>
-    
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="dock-modal-directive.js"></script>
-    
-    <script src="app.js"></script>
-    <script src="Exemplo1Ctrl.js"></script>
-    
+  
+  
+  
+  <div ng-repeat="dock in dockService.docks">
+    <div dock="dock"></div>
+  </div>
+  
+  
+  
 
 </body>
 </html>
