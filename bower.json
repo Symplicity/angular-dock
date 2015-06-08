@@ -1,0 +1,22 @@
+{
+  "name": "angular-dock",
+  "authors": [
+    "Garret Riddle"
+  ],
+  "description": "angular dock modal fork",
+  "license": "Dual licensed under the MIT or GPL Version 2 licenses.",
+  "main": "docks/dock-modal-directive.js",
+  "ignore": [
+    "**/.*",
+    "foo",
+    "bar",
+    "app.js",
+    "index.html"
+  ],
+  "dependencies": {
+    "angular": ">=1.2.16",
+    "jquery": ">=1.9",
+    "jquery.easing": "1.3.2",
+    "jQuery.ScrollTo": "1.4.2"
+  }
+}
