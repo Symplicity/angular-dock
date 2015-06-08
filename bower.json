@@ -8,6 +8,10 @@
   "main": "docks/dock-modal-directive.js",
   "ignore": [
     "**/.*",
+    "assets/js/google-code-prettify",
+    "assets/js/script.js",
+    "assets/css/documenter_style.css",
+    "assets/css/demo.css",
     "foo",
     "bar",
     "app.js",
