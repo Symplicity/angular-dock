@@ -94,13 +94,13 @@
                 // create title
                 var $dockHeader = $('<div></div>').addClass(dClass + "-header");
                 if ($this.options.showClose) {
-                    $('<a href="#" class="header-action action-close" title="Close"><i class="icon-dockmodal-close"></i></a>').appendTo($dockHeader).click(function (e) {
+                    $('<a href="#" class="header-action action-close" title="Close"><span class="sr-only">Close</span><i class="icon-dockmodal-close"></i></a>').appendTo($dockHeader).click(function (e) {
                         methods.destroy.apply($this);
                         return false;
                     });
                 }
                 if ($this.options.showPopout) {
-                    $('<a href="#" class="header-action action-popout" title="Pop out"><i class="icon-dockmodal-popout"></i></a>').appendTo($dockHeader).click(function (e) {
+                    $('<a href="#" class="header-action action-popout" title="Pop out"><span class="sr-only">Pop out</span><i class="icon-dockmodal-popout"></i></a>').appendTo($dockHeader).click(function (e) {
                         if ($dockModal.hasClass("popped-out")) {
                             methods.restore.apply($this);
                         } else {
@@ -110,7 +110,7 @@
                     });
                 }
                 if ($this.options.showMinimize) {
-                    $('<a href="#" class="header-action action-minimize" title="Minimize"><i class="icon-dockmodal-minimize"></i></a>').appendTo($dockHeader).click(function (e) {
+                    $('<a href="#" class="header-action action-minimize" title="Minimize"><span class="sr-only">Minimize</span><i class="icon-dockmodal-minimize"></i></a>').appendTo($dockHeader).click(function (e) {
                         if ($dockModal.hasClass("minimized")) {
                             if ($dockModal.hasClass("popped-out")) {
                                 methods.popout.apply($this);
